@@ -37,20 +37,15 @@ Bienvenido a **Pokeanime App**, una aplicación móvil que te permite explorar t
 
 ## 📸 Capturas de Pantalla
 
-Aquí tienes algunas capturas de la aplicación en ejecución:
-
 ### Pantalla de Pokémon
-![Pantalla Pokémon](![{1742F844-9CB8-4CB5-9832-57BF2FBFD494}](https://github.com/user-attachments/assets/e722ce13-9fb0-4419-b8b5-77ec8e7ddc79)
-)
+<img src="https://github.com/user-attachments/assets/1e0300cf-375b-4955-b0a5-f49f94480ad2" width="300" />
 
 ### Pantalla de Anime
-![Pantalla Anime](![{49F169DC-ECEA-435F-8C9B-58F7F4CF0C06}](https://github.com/user-attachments/assets/f1459c62-3635-4e19-95da-e761f3d9f8fc)
-)
+<img src="https://github.com/user-attachments/assets/6f8f612d-88b8-4aae-934b-5c31dfdc7b71" width="300" />
 
+### Pantalla Anime Detallado
+<img src="https://github.com/user-attachments/assets/61f7d46b-72b3-4e8f-b364-4113fbf19523" width="300" />
 
-![Detalle del anime](![{11F60469-2072-4714-B22D-9C5A06418F0C}](https://github.com/user-attachments/assets/b0126780-6a25-42aa-84a5-9ef4502f0469)
-
-)
 
 ## ⚡ Cómo Ejecutar la App
 
