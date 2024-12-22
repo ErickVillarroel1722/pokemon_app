@@ -90,7 +90,7 @@ class _PokemonScreenState extends State<PokemonScreen> {
                           color: Colors.red,
                           fontSize: 14,
                           shadows: [
-                            Shadow(
+                            const Shadow(
                               blurRadius: 4,
                               color: Colors.black,
                               offset: Offset(2, 2),
@@ -117,7 +117,7 @@ class _PokemonScreenState extends State<PokemonScreen> {
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                               shadows: [
-                                Shadow(
+                                const Shadow(
                                   blurRadius: 4,
                                   color: Colors.black,
                                   offset: Offset(2, 2),
@@ -132,7 +132,7 @@ class _PokemonScreenState extends State<PokemonScreen> {
                               fontSize: 16,
                               color: Colors.white,
                               shadows: [
-                                Shadow(
+                                const Shadow(
                                   blurRadius: 4,
                                   color: Colors.black,
                                   offset: Offset(2, 2),
@@ -223,7 +223,7 @@ class _PokemonScreenState extends State<PokemonScreen> {
                         style: GoogleFonts.pressStart2p(
                           color: Colors.white,
                           shadows: [
-                            Shadow(
+                            const Shadow(
                               blurRadius: 4,
                               color: Colors.black,
                               offset: Offset(2, 2),

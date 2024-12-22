@@ -37,7 +37,7 @@ class _AnimeScreenState extends State<AnimeScreen> {
           } else {
             final animes = snapshot.data!;
             return Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage('https://image.cdn2.seaart.me/2023-10-11/19597303690060805/9dce93ad8db660aa78705c3cac1183beb663a09d_high.webp'), 
                   fit: BoxFit.cover, 

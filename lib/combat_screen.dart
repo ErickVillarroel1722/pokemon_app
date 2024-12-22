@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pokemon_model.dart';
 import 'pokemon_service.dart';
-import 'dart:math';
 
 class CombatScreen extends StatefulWidget {
   final Pokemon pokemon;
@@ -15,7 +14,7 @@ class CombatScreen extends StatefulWidget {
 
 class _CombatScreenState extends State<CombatScreen> {
   late Future<Pokemon> _randomPokemon;
-  String _result = '';
+  Pokemon? _winnerPokemon;
   final String _imageUrl =
       'https://png.pngtree.com/background/20230528/original/pngtree-pokemon-adventure-forest-the-art-world-of-pokemon-wallpaper-picture-image_2778719.jpg';
 
@@ -25,26 +24,19 @@ class _CombatScreenState extends State<CombatScreen> {
     _randomPokemon = _fetchRandomPokemon();
   }
 
-  // Función para obtener un Pokémon aleatorio (puedes cambiar esto para usar una API real si deseas)
+  // Obtener un Pokémon aleatorio
   Future<Pokemon> _fetchRandomPokemon() async {
     const randomPokemonNames = ['pikachu', 'bulbasaur', 'charmander', 'squirtle'];
     final randomName = randomPokemonNames[DateTime.now().second % randomPokemonNames.length];
     return await PokemonService().fetchPokemon(randomName);
   }
 
-  // Función para iniciar el combate y determinar el ganador de manera aleatoria
+  // Iniciar el combate y determinar el ganador
   void _startCombat(Pokemon randomPokemon) {
     setState(() {
-      // Generamos un número aleatorio entre 0 y 2 para determinar el resultado
-      final randomResult = Random().nextInt(3); // 0: Gana, 1: Pierde, 2: Empate
-
-      if (randomResult == 0) {
-        _result = '${widget.pokemon.name} gana el combate!';
-      } else if (randomResult == 1) {
-        _result = '${widget.pokemon.name} pierde el combate!';
-      } else {
-        _result = 'El combate terminó en empate!';
-      }
+      // Elegir un Pokémon al azar como ganador
+      final randomResult = [widget.pokemon, randomPokemon]..shuffle();
+      _winnerPokemon = randomResult.first;
     });
   }
 
@@ -68,15 +60,14 @@ class _CombatScreenState extends State<CombatScreen> {
             child: Column(
               children: [
                 const SizedBox(height: 80),
-                // Nombre del combate
                 Text(
-                  '¡Combate entre ${widget.pokemon.name} y un Pokémon aleatorio!',
+                  '¡Combate Pokémon!',
                   style: GoogleFonts.pressStart2p(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                     shadows: [
-                      Shadow(
+                      const Shadow(
                         blurRadius: 4,
                         color: Colors.black,
                         offset: Offset(2, 2),
@@ -85,69 +76,75 @@ class _CombatScreenState extends State<CombatScreen> {
                   ),
                 ),
                 const SizedBox(height: 40),
-                // Mostrando Pokémon (Usuario arriba, Aleatorio abajo)
-                FutureBuilder<Pokemon>(
-                  future: _randomPokemon,
-                  builder: (context, snapshot) {
-                    if (snapshot.connectionState == ConnectionState.waiting) {
-                      return const CircularProgressIndicator();
-                    } else if (snapshot.hasError) {
-                      return Text(
-                        'Error: ${snapshot.error}',
-                        style: GoogleFonts.pressStart2p(
-                          color: Colors.red,
-                          fontSize: 14,
-                        ),
-                      );
-                    } else if (snapshot.hasData) {
-                      final randomPokemon = snapshot.data!;
-                      return Column(
-                        children: [
-                          // Pokémon consultado por el usuario (Arriba)
-                          _buildPokemonCard(widget.pokemon),
-                          const SizedBox(height: 20),
-                          // Pokémon aleatorio (Abajo)
-                          _buildPokemonCard(randomPokemon),
-                        ],
-                      );
-                    } else {
-                      return Text(
-                        'No se encontró el Pokémon aleatorio',
-                        style: GoogleFonts.pressStart2p(
-                          color: Colors.white,
-                          fontSize: 14,
-                        ),
-                      );
-                    }
-                  },
-                ),
-                const SizedBox(height: 40),
-                // Botón para iniciar el combate
-                ElevatedButton(
-                  onPressed: () {
-                    // Llamamos a la función para determinar el ganador de manera aleatoria
-                    final randomPokemon = _randomPokemon as Pokemon;
-                    _startCombat(randomPokemon);
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.redAccent,
-                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                    textStyle: GoogleFonts.pressStart2p(
-                      fontSize: 14,
-                    ),
+                if (_winnerPokemon == null)
+                  FutureBuilder<Pokemon>(
+                    future: _randomPokemon,
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return const CircularProgressIndicator();
+                      } else if (snapshot.hasError) {
+                        return Text(
+                          'Error: ${snapshot.error}',
+                          style: GoogleFonts.pressStart2p(
+                            color: Colors.red,
+                            fontSize: 14,
+                          ),
+                        );
+                      } else if (snapshot.hasData) {
+                        final randomPokemon = snapshot.data!;
+                        return Column(
+                          children: [
+                            _buildPokemonCard(widget.pokemon),
+                            const SizedBox(height: 20),
+                            _buildPokemonCard(randomPokemon),
+                            const SizedBox(height: 40),
+                            ElevatedButton(
+                              onPressed: () {
+                                _startCombat(randomPokemon);
+                              },
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.redAccent,
+                                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                                textStyle: GoogleFonts.pressStart2p(
+                                  fontSize: 14,
+                                ),
+                              ),
+                              child: const Text('Iniciar Combate'),
+                            ),
+                          ],
+                        );
+                      } else {
+                        return Text(
+                          'No se encontró el Pokémon aleatorio',
+                          style: GoogleFonts.pressStart2p(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        );
+                      }
+                    },
                   ),
-                  child: const Text('Iniciar Combate'),
-                ),
-                const SizedBox(height: 40),
-                // Mostrar el resultado del combate
-                if (_result.isNotEmpty)
-                  Text(
-                    _result,
-                    style: GoogleFonts.pressStart2p(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
+                if (_winnerPokemon != null)
+                  Column(
+                    children: [
+                      Text(
+                        '¡Ganador!',
+                        style: GoogleFonts.pressStart2p(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          shadows: [
+                            const Shadow(
+                              blurRadius: 4,
+                              color: Colors.black,
+                              offset: Offset(2, 2),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      _buildPokemonCard(_winnerPokemon!),
+                    ],
                   ),
               ],
             ),

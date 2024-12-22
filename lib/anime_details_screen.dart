@@ -41,7 +41,7 @@ class AnimeDetailsScreen extends StatelessWidget {
             final String animeTitle = anime['title']; // Obtenemos el título del anime
 
             return Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxHK--azp-C_HO89_r-3drTiboplHrnDknIQ&s'),
                   fit: BoxFit.cover,
