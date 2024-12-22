@@ -1,6 +1,15 @@
 # App Anime Entretaiment
+**(Esta app sigue en proceso de mejora y desarrollo constante!)**
+- (Autor: Erick Villarroel)
+- **Certificacion de Flutter: https://github.com/ErickVillarroel1722/pokemon_app/blob/main/certificado.pdf**
+- **(APK:   (En caso que presenten problemas mencionalo! siempre buscamos mejorar!!))**
+Bienvenido a **Anime Entretaiment**, una aplicación móvil que te permite explorar tanto el mundo de los **Pokémon** como el de los **Anime**. A través de una interfaz sencilla y fácil de usar, puedes obtener detalles sobre tus Pokémon favoritos y explorar recomendaciones de anime.
 
-Bienvenido a **Pokeanime App**, una aplicación móvil que te permite explorar tanto el mundo de los **Pokémon** como el de los **Anime**. A través de una interfaz sencilla y fácil de usar, puedes obtener detalles sobre tus Pokémon favoritos y explorar recomendaciones de anime.
+**Actualizacion**
+
+- **(COMBATE:22 de Diciembre: Ahora podras disfrutar con el modo combate y tendras acceso a una pagina de peleas pokemon!!)**
+
+- **(Videos: 21 de Diciembre: Ahora tu anime favorito tiene su trailer en Youtube!!! Podras ver un mini resumen si no te gusta leer la sinopsis!!!)**
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -10,36 +19,41 @@ Bienvenido a **Pokeanime App**, una aplicación móvil que te permite explorar t
 - **API de Anime**: Para obtener recomendaciones de anime y detalles sobre series y películas: https://api.jikan.moe/v4/anime
 
 ## 📱 Funcionalidades
+# Pokeanime App
 
-### Pokémon Screen:
-- Búsqueda por nombre de Pokémon.
-- Muestra estadísticas y detalles relevantes de cada Pokémon.
+Una aplicación que combina el mundo de Pokémon y Anime, permitiendo explorar contenido de ambas categorías de una forma interactiva.
 
-#### Antes de la Actualización:
-<img src="https://github.com/user-attachments/assets/1e0300cf-375b-4955-b0a5-f49f94480ad2" width="300" />
+---
 
-#### Después de la Actualización:
-<img src="https://github.com/user-attachments/assets/2f5ac0d0-3ff7-4330-8a92-54eae6e1c207" width="300" />
+### **Pokémon Screen**
+- **Funcionalidades:**
+  - Búsqueda por nombre de Pokémon.
+  - Visualización de estadísticas y detalles relevantes de cada Pokémon.
 
-### Anime Screen:
-- Recomendaciones de anime con detalles como nombre, género, y una breve descripción.
-- Interfaz amigable para explorar y aprender más sobre anime.
+| Antes de la Actualización                           | Después de la Actualización                            |
+|-----------------------------------------------------|-------------------------------------------------------|
+| <img src="https://github.com/user-attachments/assets/1e0300cf-375b-4955-b0a5-f49f94480ad2" width="300" /> | <img src="https://github.com/user-attachments/assets/ce3b0c80-7c23-4eac-860c-75876f202c38" width="300" /> |
 
-#### Antes de la Actualización:
-<img src="https://github.com/user-attachments/assets/6f8f612d-88b8-4aae-934b-5c31dfdc7b71" width="300" />
+---
 
-#### Después de la Actualización:
-<img src="![image](https://github.com/user-attachments/assets/7a2714b0-9135-44af-8a91-fae705b8fddb)
-" width="300" />
+### **Anime Screen**
+- **Funcionalidades:**
+  - Recomendaciones de anime con detalles como nombre, género y una breve descripción.
+  - Interfaz amigable para explorar y aprender más sobre anime.
 
-### Pantalla Anime Detallado:
-- Visualiza detalles más completos sobre una serie o película de anime seleccionada.
+| Antes de la Actualización                           | Después de la Actualización                            |
+|-----------------------------------------------------|-------------------------------------------------------|
+| <img src="https://github.com/user-attachments/assets/6f8f612d-88b8-4aae-934b-5c31dfdc7b71" width="300" /> | <img src="https://github.com/user-attachments/assets/39b91d40-549f-4bbc-90f8-58fc09dad381" width="300" /> |
 
-#### Antes de la Actualización:
-<img src="https://github.com/user-attachments/assets/61f7d46b-72b3-4e8f-b364-4113fbf19523" width="300" />
+---
 
-#### Después de la Actualización:
-<img src="https://github.com/user-attachments/assets/c61ccb25-ebce-4dca-8aa3-f00f4f5f0c60" width="300" />
+### **Pantalla de Anime Detallado**
+- **Funcionalidades:**
+  - Visualización detallada de una serie o película seleccionada.
+
+| Antes de la Actualización                           | Después de la Actualización                            |
+|-----------------------------------------------------|-------------------------------------------------------|
+| <img src="https://github.com/user-attachments/assets/61f7d46b-72b3-4e8f-b364-4113fbf19523" width="300" /> | <img src="https://github.com/user-attachments/assets/c61ccb25-ebce-4dca-8aa3-f00f4f5f0c60" width="300" /> |
 
 
 ## 🚀 Proceso de Desarrollo
