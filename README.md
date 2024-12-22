@@ -16,29 +16,30 @@ Bienvenido a **Pokeanime App**, una aplicación móvil que te permite explorar t
 - Muestra estadísticas y detalles relevantes de cada Pokémon.
 
 #### Antes de la Actualización:
-![Pantalla de Pokémon (Antes)](https://github.com/user-attachments/assets/1e0300cf-375b-4955-b0a5-f49f94480ad2)
+<img src="https://github.com/user-attachments/assets/1e0300cf-375b-4955-b0a5-f49f94480ad2" width="300" />
 
 #### Después de la Actualización:
-![Pantalla de Pokémon (Después)](https://github.com/user-attachments/assets/2f5ac0d0-3ff7-4330-8a92-54eae6e1c207)
+<img src="https://github.com/user-attachments/assets/2f5ac0d0-3ff7-4330-8a92-54eae6e1c207" width="300" />
 
 ### Anime Screen:
 - Recomendaciones de anime con detalles como nombre, género, y una breve descripción.
 - Interfaz amigable para explorar y aprender más sobre anime.
 
 #### Antes de la Actualización:
-![Pantalla de Anime (Antes)](https://github.com/user-attachments/assets/6f8f612d-88b8-4aae-934b-5c31dfdc7b71)
+<img src="https://github.com/user-attachments/assets/6f8f612d-88b8-4aae-934b-5c31dfdc7b71" width="300" />
 
 #### Después de la Actualización:
-![Pantalla de Anime (Después)](https://github.com/user-attachments/assets/4ea2f302-b67c-47c9-9aeb-5acfa0da60c1)
+<img src="https://github.com/user-attachments/assets/a38bb71c-da21-4c51-9fdc-5a2e8f9fe6ec" width="300" />
 
 ### Pantalla Anime Detallado:
 - Visualiza detalles más completos sobre una serie o película de anime seleccionada.
 
 #### Antes de la Actualización:
-![Pantalla Anime Detallado (Antes)](https://github.com/user-attachments/assets/61f7d46b-72b3-4e8f-b364-4113fbf19523)
+<img src="https://github.com/user-attachments/assets/61f7d46b-72b3-4e8f-b364-4113fbf19523" width="300" />
 
 #### Después de la Actualización:
-![Pantalla Anime Detallado (Después)](https://github.com/user-attachments/assets/82e8b528-9eb9-42b1-94e1-8b04c7f4205c)
+<img src="https://github.com/user-attachments/assets/c61ccb25-ebce-4dca-8aa3-f00f4f5f0c60" width="300" />
+
 
 ## 🚀 Proceso de Desarrollo
 
