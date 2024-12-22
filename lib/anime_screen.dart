@@ -3,6 +3,8 @@ import 'anime_service.dart';
 import 'anime_details_screen.dart';  
 
 class AnimeScreen extends StatefulWidget {
+  const AnimeScreen({super.key});
+
   @override
   _AnimeScreenState createState() => _AnimeScreenState();
 }
@@ -20,18 +22,18 @@ class _AnimeScreenState extends State<AnimeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 16, 108, 230),
-        title: Text('Anime List'),
+        backgroundColor: const Color.fromARGB(255, 198, 230, 16),
+        title: const Text('Anime List'),
       ),
       body: FutureBuilder<List<dynamic>>(
         future: _animes,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
           } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-            return Center(child: Text('No anime found'));
+            return const Center(child: Text('No anime found'));
           } else {
             final animes = snapshot.data!;
             return ListView.builder(

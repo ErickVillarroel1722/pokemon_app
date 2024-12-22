@@ -19,6 +19,8 @@ class Pokemon {
       stats: statsList,
     );
   }
+
+  get attack => null;
 }
 
 class Stat {
