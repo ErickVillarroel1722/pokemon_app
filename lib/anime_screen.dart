@@ -22,7 +22,7 @@ class _AnimeScreenState extends State<AnimeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 198, 230, 16),
+        backgroundColor: const Color.fromARGB(255, 16, 127, 230),
         title: const Text('Anime List'),
       ),
       body: FutureBuilder<List<dynamic>>(
@@ -36,25 +36,31 @@ class _AnimeScreenState extends State<AnimeScreen> {
             return const Center(child: Text('No anime found'));
           } else {
             final animes = snapshot.data!;
-            return ListView.builder(
-              itemCount: animes.length,
-              itemBuilder: (context, index) {
-                final anime = animes[index];
-                return ListTile(
-                  title: Text(anime['title']
-                  ),  
-                  leading: Image.network(anime['images']['jpg']['image_url']),  // Imagen del anime
-                  onTap: () {
-                    
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => AnimeDetailsScreen(id: anime['mal_id']),
-                      ),
-                    );
-                  },
-                );
-              },
+            return Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage('https://image.cdn2.seaart.me/2023-10-11/19597303690060805/9dce93ad8db660aa78705c3cac1183beb663a09d_high.webp'), 
+                  fit: BoxFit.cover, 
+                ),
+              ),
+              child: ListView.builder(
+                itemCount: animes.length,
+                itemBuilder: (context, index) {
+                  final anime = animes[index];
+                  return ListTile(
+                    title: Text(anime['title']),
+                    leading: Image.network(anime['images']['jpg']['image_url']),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AnimeDetailsScreen(id: anime['mal_id']),
+                        ),
+                      );
+                    },
+                  );
+                },
+              ),
             );
           }
         },

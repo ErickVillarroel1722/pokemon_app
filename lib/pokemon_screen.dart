@@ -147,6 +147,7 @@ class _PokemonScreenState extends State<PokemonScreen> {
                               decoration: BoxDecoration(
                                 border: Border.all(color: Colors.white),
                                 borderRadius: BorderRadius.circular(10),
+                                // ignore: deprecated_member_use
                                 color: Colors.black.withOpacity(0.5),
                               ),
                               child: DataTable(

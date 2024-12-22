@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           primary: const Color(0xFF1E88E5), // Azul primario
           secondary: const Color.fromARGB(255, 67, 249, 255), // Naranja
         ),
-        scaffoldBackgroundColor: const Color(0xFFF5F5F5), // Fondo gris claro
+        scaffoldBackgroundColor: const Color.fromARGB(255, 245, 239, 235), // Fondo gris claro
         appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xFF1E88E5), // Azul primario
           elevation: 0, // Sin sombra
