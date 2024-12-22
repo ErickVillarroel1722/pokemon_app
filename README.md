@@ -1,12 +1,12 @@
 # App Anime Entretaiment
 **(Esta app sigue en proceso de mejora y desarrollo constante!)**
-(Autor: Erick Villarroel)
+-(Autor: Erick Villarroel)
 
 Bienvenido a **Anime Entretaiment**, una aplicación móvil que te permite explorar tanto el mundo de los **Pokémon** como el de los **Anime**. A través de una interfaz sencilla y fácil de usar, puedes obtener detalles sobre tus Pokémon favoritos y explorar recomendaciones de anime.
 
 **Actualizacion**
-**(COMBATE:22 de Diciembre: Ahora podras disfrutar con el modo combate y tendras acceso a una pagina de peleas pokemon!!)**
-**(Videos: 21 de Diciembre: Ahora tu anime favorito tiene su trailer en Youtube!!! Podras ver un mini resumen si no te gusta leer la sinopsis!!!)**
+-**(COMBATE:22 de Diciembre: Ahora podras disfrutar con el modo combate y tendras acceso a una pagina de peleas pokemon!!)**
+-**(Videos: 21 de Diciembre: Ahora tu anime favorito tiene su trailer en Youtube!!! Podras ver un mini resumen si no te gusta leer la sinopsis!!!)**
 
 ## 🛠️ Tecnologías Utilizadas
 
