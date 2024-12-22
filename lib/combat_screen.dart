@@ -16,7 +16,7 @@ class _CombatScreenState extends State<CombatScreen> {
   late Future<Pokemon> _randomPokemon;
   Pokemon? _winnerPokemon;
   final String _imageUrl =
-      'https://png.pngtree.com/background/20230528/original/pngtree-pokemon-adventure-forest-the-art-world-of-pokemon-wallpaper-picture-image_2778719.jpg';
+      'https://image.cdn2.seaart.me/2023-10-11/19597303690060805/9dce93ad8db660aa78705c3cac1183beb663a09d_high.webp';
 
   @override
   void initState() {
