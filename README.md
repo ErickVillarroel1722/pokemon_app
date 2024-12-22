@@ -10,38 +10,52 @@ Bienvenido a **Pokeanime App**, una aplicación móvil que te permite explorar t
 - **API de Anime**: Para obtener recomendaciones de anime y detalles sobre series y películas: https://api.jikan.moe/v4/anime
 
 ## 📱 Funcionalidades
+# Pokeanime App
 
-### Pokémon Screen:
-- Búsqueda por nombre de Pokémon.
-- Muestra estadísticas y detalles relevantes de cada Pokémon.
+Una aplicación que combina el mundo de Pokémon y Anime, permitiendo explorar contenido de ambas categorías de una forma interactiva.
 
-#### Antes de la Actualización:
-<img src="https://github.com/user-attachments/assets/1e0300cf-375b-4955-b0a5-f49f94480ad2" width="300" />
+---
 
-#### Después de la Actualización:
-![WhatsApp Image 2024-12-21 at 22 11 43](https://github.com/user-attachments/assets/ce3b0c80-7c23-4eac-860c-75876f202c38)
+### **Pokémon Screen**
+- **Funcionalidades:**
+  - Búsqueda por nombre de Pokémon.
+  - Visualización de estadísticas y detalles relevantes de cada Pokémon.
 
+| Antes de la Actualización | Después de la Actualización |
+|---------------------------|-----------------------------|
+| ![Antes](https://github.com/user-attachments/assets/1e0300cf-375b-4955-b0a5-f49f94480ad2) | ![Después](https://github.com/user-attachments/assets/ce3b0c80-7c23-4eac-860c-75876f202c38) |
 
-### Anime Screen:
-- Recomendaciones de anime con detalles como nombre, género, y una breve descripción.
-- Interfaz amigable para explorar y aprender más sobre anime.
+---
 
-#### Antes de la Actualización:
-<img src="https://github.com/user-attachments/assets/6f8f612d-88b8-4aae-934b-5c31dfdc7b71" width="300" />
+### **Anime Screen**
+- **Funcionalidades:**
+  - Recomendaciones de anime con detalles como nombre, género y una breve descripción.
+  - Interfaz amigable para explorar y aprender más sobre anime.
 
-#### Después de la Actualización:
+| Antes de la Actualización | Después de la Actualización |
+|---------------------------|-----------------------------|
+| ![Antes](https://github.com/user-attachments/assets/6f8f612d-88b8-4aae-934b-5c31dfdc7b71) | ![Después](https://github.com/user-attachments/assets/39b91d40-549f-4bbc-90f8-58fc09dad381) |
 
-![WhatsApp Image 2024-12-22 at 14 09 01](https://github.com/user-attachments/assets/39b91d40-549f-4bbc-90f8-58fc09dad381)
+---
 
-### Pantalla Anime Detallado:
-- Visualiza detalles más completos sobre una serie o película de anime seleccionada.
+### **Pantalla de Anime Detallado**
+- **Funcionalidades:**
+  - Visualización detallada de una serie o película seleccionada.
 
-#### Antes de la Actualización:
-<img src="https://github.com/user-attachments/assets/61f7d46b-72b3-4e8f-b364-4113fbf19523" width="300" />
+| Antes de la Actualización | Después de la Actualización |
+|---------------------------|-----------------------------|
+| ![Antes](https://github.com/user-attachments/assets/61f7d46b-72b3-4e8f-b364-4113fbf19523) | ![Después](https://github.com/user-attachments/assets/c61ccb25-ebce-4dca-8aa3-f00f4f5f0c60) |
 
-#### Después de la Actualización:
-<img src="https://github.com/user-attachments/assets/c61ccb25-ebce-4dca-8aa3-f00f4f5f0c60" width="300" />
+---
 
+### Notas de Desarrollo
+1. Las imágenes se ajustan automáticamente para mantener un tamaño uniforme gracias a las propiedades `width` y `height`.
+2. Para garantizar que no se deformen, se utiliza el ajuste `fit: BoxFit.cover`.
+
+---
+
+### Capturas en el Mismo Tamaño
+Para mantener todas las imágenes uniformes, se recomienda usar tamaños fijos de `300px` de ancho y altura para vistas previas en el **README**. Las tablas permiten comparar fácilmente los cambios antes y después.
 
 ## 🚀 Proceso de Desarrollo
 
