@@ -19,7 +19,8 @@ Bienvenido a **Pokeanime App**, una aplicación móvil que te permite explorar t
 <img src="https://github.com/user-attachments/assets/1e0300cf-375b-4955-b0a5-f49f94480ad2" width="300" />
 
 #### Después de la Actualización:
-<img src="https://github.com/user-attachments/assets/2f5ac0d0-3ff7-4330-8a92-54eae6e1c207" width="300" />
+![WhatsApp Image 2024-12-21 at 22 11 43](https://github.com/user-attachments/assets/ce3b0c80-7c23-4eac-860c-75876f202c38)
+
 
 ### Anime Screen:
 - Recomendaciones de anime con detalles como nombre, género, y una breve descripción.
