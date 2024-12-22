@@ -21,9 +21,9 @@ Una aplicación que combina el mundo de Pokémon y Anime, permitiendo explorar c
   - Búsqueda por nombre de Pokémon.
   - Visualización de estadísticas y detalles relevantes de cada Pokémon.
 
-| Antes de la Actualización | Después de la Actualización |
-|---------------------------|-----------------------------|
-| ![Antes](https://github.com/user-attachments/assets/1e0300cf-375b-4955-b0a5-f49f94480ad2) | ![Después](https://github.com/user-attachments/assets/ce3b0c80-7c23-4eac-860c-75876f202c38) |
+| Antes de la Actualización                           | Después de la Actualización                            |
+|-----------------------------------------------------|-------------------------------------------------------|
+| <img src="https://github.com/user-attachments/assets/1e0300cf-375b-4955-b0a5-f49f94480ad2" width="300" /> | <img src="https://github.com/user-attachments/assets/ce3b0c80-7c23-4eac-860c-75876f202c38" width="300" /> |
 
 ---
 
@@ -32,9 +32,9 @@ Una aplicación que combina el mundo de Pokémon y Anime, permitiendo explorar c
   - Recomendaciones de anime con detalles como nombre, género y una breve descripción.
   - Interfaz amigable para explorar y aprender más sobre anime.
 
-| Antes de la Actualización | Después de la Actualización |
-|---------------------------|-----------------------------|
-| ![Antes](https://github.com/user-attachments/assets/6f8f612d-88b8-4aae-934b-5c31dfdc7b71) | ![Después](https://github.com/user-attachments/assets/39b91d40-549f-4bbc-90f8-58fc09dad381) |
+| Antes de la Actualización                           | Después de la Actualización                            |
+|-----------------------------------------------------|-------------------------------------------------------|
+| <img src="https://github.com/user-attachments/assets/6f8f612d-88b8-4aae-934b-5c31dfdc7b71" width="300" /> | <img src="https://github.com/user-attachments/assets/39b91d40-549f-4bbc-90f8-58fc09dad381" width="300" /> |
 
 ---
 
@@ -42,20 +42,10 @@ Una aplicación que combina el mundo de Pokémon y Anime, permitiendo explorar c
 - **Funcionalidades:**
   - Visualización detallada de una serie o película seleccionada.
 
-| Antes de la Actualización | Después de la Actualización |
-|---------------------------|-----------------------------|
-| ![Antes](https://github.com/user-attachments/assets/61f7d46b-72b3-4e8f-b364-4113fbf19523) | ![Después](https://github.com/user-attachments/assets/c61ccb25-ebce-4dca-8aa3-f00f4f5f0c60) |
+| Antes de la Actualización                           | Después de la Actualización                            |
+|-----------------------------------------------------|-------------------------------------------------------|
+| <img src="https://github.com/user-attachments/assets/61f7d46b-72b3-4e8f-b364-4113fbf19523" width="300" /> | <img src="https://github.com/user-attachments/assets/c61ccb25-ebce-4dca-8aa3-f00f4f5f0c60" width="300" /> |
 
----
-
-### Notas de Desarrollo
-1. Las imágenes se ajustan automáticamente para mantener un tamaño uniforme gracias a las propiedades `width` y `height`.
-2. Para garantizar que no se deformen, se utiliza el ajuste `fit: BoxFit.cover`.
-
----
-
-### Capturas en el Mismo Tamaño
-Para mantener todas las imágenes uniformes, se recomienda usar tamaños fijos de `300px` de ancho y altura para vistas previas en el **README**. Las tablas permiten comparar fácilmente los cambios antes y después.
 
 ## 🚀 Proceso de Desarrollo
 
