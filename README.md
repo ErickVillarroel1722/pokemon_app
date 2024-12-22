@@ -3,7 +3,9 @@
 - (Autor: Erick Villarroel)
 - **Certificacion de Flutter: https://github.com/ErickVillarroel1722/pokemon_app/blob/main/certificado.pdf**
 - **(APK: https://github.com/ErickVillarroel1722/pokemon_app/tree/main/APK (En caso que presenten problemas mencionalo! siempre buscamos mejorar!!))**
-Bienvenido a **Anime Entretaiment**, una aplicación móvil que te permite explorar tanto el mundo de los **Pokémon** como el de los **Anime**. A través de una interfaz sencilla y fácil de usar, puedes obtener detalles sobre tus Pokémon favoritos y explorar recomendaciones de anime.
+
+
+- Bienvenido a **Anime Entretaiment**, una aplicación móvil que te permite explorar tanto el mundo de los **Pokémon** como el de los **Anime**. A través de una interfaz sencilla y fácil de usar, puedes obtener detalles sobre tus Pokémon favoritos y explorar recomendaciones de anime.
 
 **Actualizacion**
 
