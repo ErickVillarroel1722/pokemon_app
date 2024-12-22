@@ -29,8 +29,8 @@ Bienvenido a **Pokeanime App**, una aplicación móvil que te permite explorar t
 <img src="https://github.com/user-attachments/assets/6f8f612d-88b8-4aae-934b-5c31dfdc7b71" width="300" />
 
 #### Después de la Actualización:
-<img src="![image](https://github.com/user-attachments/assets/7a2714b0-9135-44af-8a91-fae705b8fddb)
-" width="300" />
+<img src= "(https://github.com/user-attachments/assets/db4965b5-2079-42b4-9a4a-5e34a1b3bdc8)"
+ width="300" />
 
 ### Pantalla Anime Detallado:
 - Visualiza detalles más completos sobre una serie o película de anime seleccionada.
