@@ -15,7 +15,7 @@ class Pokemon {
 
     return Pokemon(
       name: json['name'],
-      imageUrl: json['sprites']['front_default'],
+      imageUrl: json['sprites']['other']['official-artwork']['front_default'],
       stats: statsList,
     );
   }

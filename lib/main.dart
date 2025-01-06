@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';  // Importa url_launcher
+import 'package:icon_broken/icon_broken.dart';
 import 'pokemon_screen.dart';
-import 'anime_screen.dart'; 
+import 'anime_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Pokeanime',  
+      title: 'Pokeanime',
       theme: ThemeData(
+        useMaterial3: true,
         colorScheme: const ColorScheme.light(
           primary: Color(0xFF1E88E5), // Azul primario
           secondary: Color.fromARGB(255, 67, 249, 255), // Naranja
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
           elevation: 0, // Sin sombra
         ),
         textTheme: const TextTheme(
-          bodyLarge: TextStyle(color: Colors.black), 
+          bodyLarge: TextStyle(color: Colors.black),
           bodyMedium: TextStyle(color: Colors.black),
           titleLarge: TextStyle(color: Colors.white), // Títulos en blanco
         ),
@@ -40,71 +41,51 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const MyHomePage(), 
+      home: const MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
   @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _currentPage = 0; // Controla la página seleccionada
+
+  // Lista de páginas
+  final List<Widget> _pages = [
+    const PokemonScreen(), // Pantalla de Pokémon
+    const AnimeScreen(), // Pantalla de Anime
+  ];
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: null, // No necesitamos título, la imagen será el centro
-        backgroundColor: const Color(0xFF1E88E5),  // Azul primario
-        centerTitle: true,  // Asegura que todo esté centrado
-        actions: [
-          // Botón derecho
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15.0),
-            child: ElevatedButton(
-              onPressed: () {
-                // Redirigir a la página de Anime
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const AnimeScreen()), 
-                );
-              },
-              child: const Text(
-                'Anime',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
+    return SafeArea(
+      child: Scaffold(
+        body: _pages[_currentPage], // Muestra la página seleccionada
+        bottomNavigationBar: NavigationBar(
+          selectedIndex: _currentPage,
+          onDestinationSelected: (int index) {
+            setState(() {
+              _currentPage = index;
+            });
+          },
+          destinations: const [
+            NavigationDestination(
+              icon: Icon(IconBroken.Heart),
+              label: 'Pokedex',
             ),
-          ),
-        ],
-        flexibleSpace: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Center(
-            child: Image.network(
-              'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1024px-International_Pok%C3%A9mon_logo.svg.png', 
-              width: 150,  // Tamaño de la imagen
-              height: 50, 
-              fit: BoxFit.cover, 
+            NavigationDestination(
+              icon: Icon(IconBroken.Ticket),
+              label: 'Anime',
             ),
-          ),
-        ),
-        leading: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 15.0),
-          child: ElevatedButton(
-            onPressed: () async {
-              // Redirigir al enlace de Pokémon Showdown
-              const url = 'https://play.pokemonshowdown.com/';
-              if (await canLaunch(url)) {
-                await launch(url);
-              } else {
-                throw 'No se pudo abrir la URL: $url';
-              }
-            },
-            child: const Text(
-              'Izquierda',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
-          ),
+          ],
         ),
       ),
-      body: const PokemonScreen(),  // Solo el contenido de Pokémon
     );
   }
 }

@@ -9,7 +9,7 @@ class AnimeService {
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
-      return data['data'];  
+      return data['data'];
     } else {
       throw Exception('Failed to load animes');
     }
@@ -20,7 +20,7 @@ class AnimeService {
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
-      return data['data'];  
+      return data['data'];
     } else {
       throw Exception('Failed to load anime details');
     }

@@ -28,7 +28,7 @@ class AnimeDetailsScreen extends StatelessWidget {
         elevation: 0,
       ),
       body: FutureBuilder<Map<String, dynamic>>(
-        future: AnimeService().fetchAnimeDetails(id), // Llamamos al servicio para obtener detalles
+        future: AnimeService().fetchAnimeDetails(id),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
@@ -38,6 +38,7 @@ class AnimeDetailsScreen extends StatelessWidget {
             return const Center(child: Text('No details found'));
           } else {
             final anime = snapshot.data!;
+            print(anime);
             final String animeTitle = anime['title']; // Obtenemos el título del anime
 
             return Container(
@@ -51,12 +52,16 @@ class AnimeDetailsScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 child: ListView(
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: Image.network(
-                        anime['images']['jpg']['image_url'], // Imagen del anime
-                        height: 225,
-                        fit: BoxFit.cover,
+                    // Hero widget for image
+                    Hero(
+                      tag: anime['mal_id'],
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.network(
+                          anime['images']['jpg']['image_url'],
+                          height: 225,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                     const SizedBox(height: 20),
@@ -76,7 +81,7 @@ class AnimeDetailsScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     const Text(
-                      'Synopsis:',
+                      'Synopsis: ',
                       style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 10),
@@ -91,17 +96,17 @@ class AnimeDetailsScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 20),
                     // Botón para abrir el trailer en YouTube
- ElevatedButton(
-  onPressed: () => _launchURL(animeTitle),  // Llamamos a la función para abrir el trailer
-  style: ElevatedButton.styleFrom(
-    backgroundColor: Colors.blueAccent, // Estilo del botón
-    foregroundColor: Colors.white,       // Establece el color del texto a blanco
-  ),
-  child: const Text(
-    'Hecha un vistazo!!',
-    style: TextStyle(fontSize: 18),
-  ),
-),
+                    ElevatedButton(
+                      onPressed: () => _launchURL(animeTitle),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blueAccent,
+                        foregroundColor: Colors.white,
+                      ),
+                      child: const Text(
+                        'Hecha un vistazo!!',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                    ),
                     const SizedBox(height: 20),
                   ],
                 ),

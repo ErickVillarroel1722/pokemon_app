@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pokemon_model.dart';
@@ -15,6 +16,7 @@ class CombatScreen extends StatefulWidget {
 class _CombatScreenState extends State<CombatScreen> {
   late Future<Pokemon> _randomPokemon;
   Pokemon? _winnerPokemon;
+  bool _isCombatStarted = false; // Controla si el combate ha comenzado
   final String _imageUrl =
       'https://image.cdn2.seaart.me/2023-10-11/19597303690060805/9dce93ad8db660aa78705c3cac1183beb663a09d_high.webp';
 
@@ -34,7 +36,7 @@ class _CombatScreenState extends State<CombatScreen> {
   // Iniciar el combate y determinar el ganador
   void _startCombat(Pokemon randomPokemon) {
     setState(() {
-      // Elegir un Pokémon al azar como ganador
+      _isCombatStarted = true; // Se marca que el combate ha comenzado
       final randomResult = [widget.pokemon, randomPokemon]..shuffle();
       _winnerPokemon = randomResult.first;
     });
@@ -44,7 +46,8 @@ class _CombatScreenState extends State<CombatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pantalla de Combate'),
+        title: Text('Combate Pokemón', style: GoogleFonts.pressStart2p(color: Colors.white, fontSize: 14)),
+        centerTitle: true,
         backgroundColor: const Color(0xFF1E88E5),
       ),
       body: Container(
@@ -54,27 +57,31 @@ class _CombatScreenState extends State<CombatScreen> {
             fit: BoxFit.cover,
           ),
         ),
-        child: SingleChildScrollView(
+        child: SizedBox(
+          width: MediaQuery.sizeOf(context).width,
+          height: MediaQuery.sizeOf(context).height,
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
                 const SizedBox(height: 80),
-                Text(
-                  '¡Combate Pokémon!',
-                  style: GoogleFonts.pressStart2p(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    shadows: [
-                      const Shadow(
-                        blurRadius: 4,
-                        color: Colors.black,
-                        offset: Offset(2, 2),
-                      ),
-                    ],
+                // Título solo si el combate no ha comenzado
+                if (!_isCombatStarted)
+                  Text(
+                    '¡Al ataque!',
+                    style: GoogleFonts.pressStart2p(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      shadows: [
+                        const Shadow(
+                          blurRadius: 4,
+                          color: Colors.black,
+                          offset: Offset(2, 2),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
                 const SizedBox(height: 40),
                 if (_winnerPokemon == null)
                   FutureBuilder<Pokemon>(
@@ -109,7 +116,7 @@ class _CombatScreenState extends State<CombatScreen> {
                                   fontSize: 14,
                                 ),
                               ),
-                              child: const Text('Iniciar Combate'),
+                              child: const Text('Iniciar Combate', style: TextStyle(color: Colors.white)),
                             ),
                           ],
                         );
@@ -165,12 +172,12 @@ class _CombatScreenState extends State<CombatScreen> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            FadeInImage.assetNetwork(
-              placeholder: 'assets/placeholder.png',
-              image: pokemon.imageUrl,
-              height: 150,
-              width: 150,
-              fit: BoxFit.cover,
+            CachedNetworkImage(
+              imageUrl: pokemon.imageUrl,
+              placeholder: (context, url) => const CircularProgressIndicator(),
+              errorWidget: (context, url, error) => const Icon(Icons.error),
+              width: 120,
+              height: 120,
             ),
             const SizedBox(height: 10),
             Text(
