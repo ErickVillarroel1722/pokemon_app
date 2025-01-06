@@ -1,4 +1,4 @@
-package com.example.pokemon_app
+package com.erickdev.pokeanime
 
 import io.flutter.embedding.android.FlutterActivity
 

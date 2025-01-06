@@ -20,6 +20,7 @@ dependencies:
   url_launcher: ^6.1.5  # Asegúrate de usar la última versión disponible
   flutter_svg: ^2.0.16
   icon_broken: ^1.1.0
+  change_app_package_name: ^1.4.0
 
 dev_dependencies:
   flutter_test:
